@@ -1,11 +1,12 @@
 # BEHAVIOR3PY
 
-This is the official python version of the Behavior3 library, originally written in Javascript.
+Forked from https://github.com/behavior3/behavior3py
 
 NOTE: this version still lacks specific documentation, but almost everything you need can be dig from the javascript-version.
 
 
 ## Main features
+- Python3 support
 
 - Based on the work of [(Marzinotto et al., 2014)](http://www.csc.kth.se/~miccol/Michele_Colledanchise/Publications_files/2013_ICRA_mcko.pdf), in which they propose a **formal**, **consistent** and **general** definition of Behavior Trees;
 

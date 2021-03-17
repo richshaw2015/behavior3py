@@ -5,6 +5,7 @@ from common import *
 
 import b3
 
+
 class TestBaseNode(unittest.TestCase):
     def test_initialization(self):
         node = b3.BaseNode()
@@ -124,7 +125,6 @@ class TestBaseNode(unittest.TestCase):
         tick._tick_node.assert_called_once_with(node)
         tick._close_node.assert_called_once_with(node)
         tick._exit_node.assert_called_once_with(node)
-
 
 
 if __name__ == '__main__':
