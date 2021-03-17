@@ -30,7 +30,7 @@ class BehaviorTree(object):
                 cls = getattr(b3, spec['name'])
 
             else:
-                raise AttibuteError('BehaviorTree.load: Invalid node name "%s"'%spec['name'])
+                raise AttributeError('BehaviorTree.load: Invalid node name "%s"'%spec['name'])
 
             node = cls()
             node.id = spec['id'] or node.id
