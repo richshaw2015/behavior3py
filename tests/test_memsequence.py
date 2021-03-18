@@ -2,10 +2,12 @@ import b3
 import unittest
 from common import *
 
+
 def get_node(status):
     stub = NodeStub();
     stub._execute.return_value = status
     return stub
+
 
 class TestMemSequence(unittest.TestCase):
     def test_category(self):
@@ -130,7 +132,6 @@ class TestMemSequence(unittest.TestCase):
         self.assertEqual(node3._execute.call_count, 1)
         self.assertEqual(node4._execute.call_count, 1)
         self.assertEqual(node5._execute.call_count, 0)
-
 
 
 if __name__ == '__main__':

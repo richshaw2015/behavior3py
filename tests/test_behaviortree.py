@@ -1,9 +1,9 @@
 import unittest
-import mock
 
 from common import *
 
 import b3
+
 
 class TestBaseNode(unittest.TestCase):
     def test_initialization(self):
@@ -33,11 +33,11 @@ class TestBaseNode(unittest.TestCase):
         blackboard = mock.Mock()
         target = {}
         node = mock.Mock()
-        
 
         def side_effect(tick):
             tick._enter_node('node1')
             tick._enter_node('node2')
+
         node._execute.side_effect = side_effect
         blackboard.get.return_value = []
 
@@ -93,7 +93,6 @@ class TestBaseNode(unittest.TestCase):
         self.assertEqual(node3._close.call_count, 0)
         self.assertEqual(node2._close.call_count, 0)
         self.assertEqual(node1._close.call_count, 0)
-
 
 
 if __name__ == '__main__':

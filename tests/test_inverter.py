@@ -2,6 +2,7 @@ import b3
 import unittest
 from common import *
 
+
 class TestInverter(unittest.TestCase):
     def test_category(self):
         self.assertEqual(b3.Inverter.category, b3.DECORATOR)
@@ -33,7 +34,7 @@ class TestInverter(unittest.TestCase):
         status = inverter._execute(tick)
         self.assertEqual(status, b3.RUNNING)
 
-    def test_running(self):
+    def test_running2(self):
         inverter = b3.Inverter()
         tick = TickStub()
 

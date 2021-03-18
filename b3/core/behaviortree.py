@@ -3,6 +3,7 @@ import uuid
 
 __all__ = ['BehaviorTree']
 
+
 class BehaviorTree(object):
     def __init__(self):
         self.id = str(uuid.uuid1())
@@ -50,8 +51,7 @@ class BehaviorTree(object):
                 node.child = nodes[spec['child']]
 
         if (data['root']):
-            self.root = nodes[data['root']];
-
+            self.root = nodes[data['root']]
 
     def dump(self):
         data = {}
@@ -100,7 +100,6 @@ class BehaviorTree(object):
             data['nodes'][node.id] = spec
 
         return data
-
 
     def tick(self, target, blackboard):
 

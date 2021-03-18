@@ -5,6 +5,7 @@ from common import *
 
 import b3
 
+
 class TestBaseNode(unittest.TestCase):
     def test_basicReadAndWrite(self):
         blackboard = b3.Blackboard()
@@ -39,19 +40,19 @@ class TestBaseNode(unittest.TestCase):
     def test_readAndWriteWithinNodeScope(self):
         blackboard = b3.Blackboard()
 
-
         blackboard.set('var1', 'value 1', 'tree 1')
         blackboard.set('var2', 'value 2', 'tree 1', 'node 1')
         blackboard.set('var3', 'value 3', 'tree 1', 'node 2')
         blackboard.set('var4', 1000, 'tree 2')
 
-        self.assertEqual(blackboard.get('var2', 'tree 1', 'node 1'), 'value 2');
-        self.assertEqual(blackboard.get('var3', 'tree 1', 'node 2'), 'value 3');
-        self.assertEqual(blackboard.get('var2', 'tree 1', 'node 2'), None);
-        self.assertEqual(blackboard.get('var3', 'tree 1', 'node 1'), None);
-        self.assertEqual(blackboard.get('var2', 'tree 1'), None);
-        self.assertEqual(blackboard.get('var1', 'tree 1', 'node 1'), None);
-        self.assertEqual(blackboard.get('var2', 'tree 2', 'node 1'), None);
+        self.assertEqual(blackboard.get('var2', 'tree 1', 'node 1'), 'value 2')
+        self.assertEqual(blackboard.get('var3', 'tree 1', 'node 2'), 'value 3')
+        self.assertEqual(blackboard.get('var2', 'tree 1', 'node 2'), None)
+        self.assertEqual(blackboard.get('var3', 'tree 1', 'node 1'), None)
+        self.assertEqual(blackboard.get('var2', 'tree 1'), None)
+        self.assertEqual(blackboard.get('var1', 'tree 1', 'node 1'), None)
+        self.assertEqual(blackboard.get('var2', 'tree 2', 'node 1'), None)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -2,6 +2,7 @@ import b3
 
 __all__ = ['Inverter']
 
+
 class Inverter(b3.Decorator):
     def tick(self, tick):
         if not self.child:
@@ -15,4 +16,3 @@ class Inverter(b3.Decorator):
             status = b3.SUCCESS
 
         return status
-        

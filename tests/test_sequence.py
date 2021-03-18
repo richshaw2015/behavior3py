@@ -2,10 +2,12 @@ import b3
 import unittest
 from common import *
 
+
 def get_node(status):
-    stub = NodeStub();
+    stub = NodeStub()
     stub._execute.return_value = status
     return stub
+
 
 class TestSequence(unittest.TestCase):
     def test_category(self):

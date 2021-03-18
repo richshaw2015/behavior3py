@@ -1,5 +1,6 @@
 __all__ = ['Tick']
 
+
 class Tick(object):
     '''Tick Class.
 

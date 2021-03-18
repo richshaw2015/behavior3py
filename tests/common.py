@@ -1,5 +1,6 @@
 import mock
 
+
 class TickStub(object):
     def __init__(self):
         self.tree = mock.Mock()
@@ -14,9 +15,11 @@ class TickStub(object):
 
         self.tree.id = 'tree1'
 
+
 class NodeStub(object):
     def __init__(self):
         self._execute = mock.Mock()
+
 
 def create_side_effects(results):
     def function(*args, **kwargs):

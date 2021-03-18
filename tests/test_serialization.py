@@ -1,12 +1,24 @@
 import b3
 import unittest
 
-class A(b3.Composite): pass
-class B(b3.Decorator): pass
-class C(b3.Condition): pass
-class D(b3.Action): pass
 
-names = {'A':A, 'B':B, 'C':C, 'D':D}
+class A(b3.Composite):
+    pass
+
+
+class B(b3.Decorator):
+    pass
+
+
+class C(b3.Condition):
+    pass
+
+
+class D(b3.Action):
+    pass
+
+
+names = {'A': A, 'B': B, 'C': C, 'D': D}
 data = {
     "title": "Custom Name BT",
     "description": "description =)",
@@ -184,6 +196,7 @@ data = {
     ]
 }
 
+
 class TestPriority(unittest.TestCase):
     def test_load(self):
         tree = b3.BehaviorTree()
@@ -203,6 +216,7 @@ class TestPriority(unittest.TestCase):
 
     def test_dump(self):
         tree = b3.BehaviorTree()
+
         class Custom(b3.Condition):
             title = 'custom'
 
@@ -235,12 +249,12 @@ class TestPriority(unittest.TestCase):
         node1.id = 'node-1';
         node1.title = 'Node1';
         node1.description = 'Node 1 Description';
-        node1.properties = { 'key' : 'value' }
+        node1.properties = {'key': 'value'}
 
         tree.root = node1;
         tree.title = 'Title in Tree';
         tree.description = 'Tree Description';
-        
+
         data = tree.dump();
 
         self.assertEqual(data['title'], 'Title in Tree');

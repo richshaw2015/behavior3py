@@ -1,5 +1,4 @@
 import unittest
-import mock
 
 from common import *
 
@@ -17,8 +16,8 @@ class TestBaseNode(unittest.TestCase):
         self.assertDictEqual(node.parameters, {})
         self.assertDictEqual(node.properties, {})
         self.assertEqual(node.description, '')
-        self.assertRaises(AttributeError, lambda:node.children)
-        self.assertRaises(AttributeError, lambda:node.child)
+        self.assertRaises(AttributeError, lambda: node.children)
+        self.assertRaises(AttributeError, lambda: node.child)
 
     def test_openNode(self):
         node = b3.BaseNode()
