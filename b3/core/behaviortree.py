@@ -128,3 +128,5 @@ class BehaviorTree(object):
         # Populate blackboard
         blackboard.set('open_nodes', curr_open_nodes, self.id)
         blackboard.set('node_count', tick._node_count, self.id)
+
+        return state
