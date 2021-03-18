@@ -1,5 +1,6 @@
 import b3
 import unittest
+from b3 import Blackboard
 
 
 class A(b3.Composite):
@@ -11,7 +12,8 @@ class B(b3.Decorator):
 
 
 class C(b3.Condition):
-    pass
+    def tick(self, tick):
+        return b3.FAILURE
 
 
 class D(b3.Action):
@@ -213,6 +215,13 @@ class TestPriority(unittest.TestCase):
         self.assertEqual(len(tree.root.properties), 1)
         self.assertEqual(tree.root.properties['b'], 'cv')
         self.assertEqual(len(tree.root.children), 2)
+
+    def test_tick(self):
+        tree = b3.BehaviorTree()
+        tree.load(data, names)
+        blackboard = Blackboard()
+
+        tree.tick({}, blackboard)
 
     def test_dump(self):
         tree = b3.BehaviorTree()

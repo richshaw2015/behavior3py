@@ -2,6 +2,7 @@ import b3
 
 __all__ = ['MemSequence']
 
+
 class MemSequence(b3.Composite):
     def __init__(self, children=None):
         super(MemSequence, self).__init__(children)

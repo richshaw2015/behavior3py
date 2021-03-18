@@ -8,4 +8,3 @@ class Condition(b3.BaseNode):
 
     def __init__(self):
         super(Condition, self).__init__()
-        

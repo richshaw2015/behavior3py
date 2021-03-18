@@ -3,6 +3,7 @@ import uuid
 
 __all__ = ['BaseNode']
 
+
 class BaseNode(object):
     category = None
     title = None
@@ -22,7 +23,7 @@ class BaseNode(object):
     def _execute(self, tick):
         self._enter(tick)
 
-        if (not tick.blackboard.get('is_open', tick.tree.id, self.id)):
+        if not tick.blackboard.get('is_open', tick.tree.id, self.id):
             self._open(tick)
 
         status = self._tick(tick)
@@ -56,8 +57,17 @@ class BaseNode(object):
         tick._exit_node(self)
         self.exit(tick)
 
-    def enter(self, tick): pass
-    def open(self, tick): pass
-    def tick(self, tick): pass
-    def close(self, tick): pass
-    def exit(self, tick): pass
+    def enter(self, tick):
+        pass
+
+    def open(self, tick):
+        pass
+
+    def tick(self, tick):
+        pass
+
+    def close(self, tick):
+        pass
+
+    def exit(self, tick):
+        pass

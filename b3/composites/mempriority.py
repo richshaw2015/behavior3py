@@ -2,6 +2,7 @@ import b3
 
 __all__ = ['MemPriority']
 
+
 class MemPriority(b3.Composite):
     def __init__(self, children=None):
         super(MemPriority, self).__init__(children)

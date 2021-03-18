@@ -2,6 +2,7 @@ import b3
 
 __all__ = ['Priority']
 
+
 class Priority(b3.Composite):
     def __init__(self, children=None):
         super(Priority, self).__init__(children)

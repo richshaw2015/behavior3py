@@ -8,4 +8,3 @@ class Action(b3.BaseNode):
 
     def __init__(self):
         super(Action, self).__init__()
-        

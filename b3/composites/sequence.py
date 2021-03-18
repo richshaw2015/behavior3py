@@ -2,6 +2,7 @@ import b3
 
 __all__ = ['Sequence']
 
+
 class Sequence(b3.Composite):
 
     def __init__(self, children=None):
